@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="favicon.ico">
+  <title>Верстка PROFIT - Рейтинг компаний</title>
+  <link href="css/normalize.css" rel="stylesheet">
+<script defer src="js/runtime~main.js"></script><script defer src="js/main.js"></script><link href="css/main.css" rel="stylesheet"></head>
+<body>
+
+<div class="wrapper">
+
+  <!--Шапка сайта-->
+  <header id="header" class="header">
+    <div class="header__inner">
+
+      <!--Шапка логотип-->
+      <div class="header-logo">
+        <div class="header-logo__img"><a href="/" title=""><img src="/images/logo.png" alt=""></a></div>
+        <div class="header-logo__text">Развитие отделов продаж по всей<br>России с гарантией роста выручки</div>
+        <div class="header-logo__date">Работаем с 2016 года</div>
+      </div>
+
+      <!--Шапка выбор места-->
+      <div id="header-choice" class="header-choice">
+        <a href="" class="header-choice__block">
+          <img src="/images/icon-city.png" alt="" class="header-choice__icon">
+          <div class="header-choice__name">Ваш город:</div>
+          <div class="header-choice__link">
+            <span class="header-choice__city">Москва</span>
+            <img src="/images/header-arrow.svg" alt="">
+          </div>
+        </a>
+        <a href="" class="header-choice__block">
+          <img src="/images/icon-city.png" alt="" class="header-choice__icon">
+          <div class="header-choice__name">Район:</div>
+          <div class="header-choice__link">
+            <span class="header-choice__district">Беговой</span>
+            <img src="/images/header-arrow.svg" alt="">
+          </div>
+        </a>
+        <a href="" class="header-choice__block">
+          <img src="/images/icon-metro.png" alt="" class="header-choice__icon">
+          <div class="header-choice__name">Метро:</div>
+          <div class="header-choice__link">
+            <span class="header-choice__metro">Prospekt Mira</span>
+            <img src="/images/header-arrow.svg" alt="">
+          </div>
+        </a>
+        <a href="" class="header-choice__block">
+          <img src="/images/icon-metro.png" alt="" class="header-choice__icon">
+          <div class="header-choice__name">Рейтинг организаций по:</div>
+          <div class="header-choice__link">
+            <span class="header-choice__type">Ремонт стиральных машин</span>
+            <img src="/images/header-arrow.svg" alt="">
+          </div>
+        </a>
+        <a href="" title="Заказать звонок" class="nav-appointment js-phone-popup" data-name="Заказать звонок">
+          <span>Заказать звонок</span>
+        </a>
+        <div class="header-choice__messengers messengers">
+          <a href="whatsapp://send?phone=79264496896" title="Написать в WhatsApp" class="messengers__link">
+            <img src="/images/icon-whatsapp-gray.svg" class="messengers__icon">
+            <div class="messengers__name">WhatsApp</div>
+          </a>
+          <a href="tg://resolve?domain=kan_nik" title="Написать в Telegram" class="messengers__link">
+            <img src="/images/icon-telegram-gray.svg" class="messengers__icon">
+            <div class="messengers__name">Telegram</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Шапка - контакты -->
+      <div class="header-contacts">
+        <div class="header-contacts__numbers">
+          <div class="header-contacts__messengers">
+            <div class="messengers">
+              <a href="whatsapp://send?phone=79264496896" title="Написать в WhatsApp" class="messengers__link">
+                <img src="/images/icon-whatsapp-gray.svg" class="messengers__icon">
+                <div class="messengers__name">WhatsApp</div>
+              </a>
+              <a href="tg://resolve?domain=kan_nik" title="Написать в Telegram" class="messengers__link">
+                <img src="/images/icon-telegram-gray.svg" class="messengers__icon">
+                <div class="messengers__name">Telegram</div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <a href="tel:+79238884587" title="Позвонить" class="header-contacts__phone">+7 923 888-45-87</a>
+          </div>
+          <div>
+            <a href="" title="Перезвонить" class="header-contacts__callback js-phone-popup" data-name="Перезвонить мне">Перезвоните мне</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="" title="Заказать звонок" class="header-appointment js-phone-popup" data-name="Заказать звонок">
+        <span>Заказать звонок</span>
+      </a>
+
+      <div id="js-open-menu" class="header-link-menu">
+        <span class="header-link-menu__icon"></span>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="section">
+
+    <!--О типе рейтинга-->
+    <div class="about-rating">
+      <div class="about-rating__inner">
+
+        <div class="about-rating__text">
+          <h1>Ремонт стиральных машин на дому <b>в Москве</b></h1>
+          <p>
+            Ищете надежную компанию для ремонта стиральной машины? Попрощайтесь с проблемами в работе вашего бытового агрегата! Наша платформа предоставляет удобный поиск специалистов по ремонту стиральных машин. Найдите опытных профессионалов в вашем районе и восстановите работоспособность вашей машины быстро и качественно. Доверьте свой ремонт надежным экспертам и наслаждайтесь безупречной работой вашей стиральной машины. Восстановите комфорт и уверенность в своем бытовом оборудовании с нашей помощью.
+          </p>
+          <p>
+            Найдите опытных профессионалов в вашем районе и восстановите работоспособность вашей машины быстро.
+          </p>
+        </div>
+
+        <div class="about-rating__blocks about-rating-blocks">
+          <div class="about-rating-blocks__item">
+            <div class="about-rating-blocks__icon">
+              <img src="/images/icon-master.png" alt="">
+            </div>
+            <div class="about-rating-blocks__text">
+              Профессиональные специалисты и&nbsp;надежный ремонт
+            </div>
+          </div>
+
+          <div class="about-rating-blocks__item">
+            <div class="about-rating-blocks__icon">
+              <img src="/images/icon-pinion.png" alt="">
+            </div>
+            <div class="about-rating-blocks__text">
+              Широкий спектр услуг для&nbsp;различных типов электрической техники
+            </div>
+          </div>
+
+          <div class="about-rating-blocks__item">
+            <div class="about-rating-blocks__icon">
+              <img src="/images/icon-loupe.png" alt="">
+            </div>
+            <div class="about-rating-blocks__text">
+              Быстрый доступ и&nbsp;удобство в&nbsp;поиске компаний для ремонта
+            </div>
+          </div>
+        </div>
+
+        <div class="about-rating__contacts about-rating-contacts">
+          <div class="about-rating-contacts__icon">
+            <img src="/images/icon-red-phone.png" alt="">
+          </div>
+          <div class="about-rating-contacts__text">
+            <b>Горячая линия</b>
+            Поможем вам записаться на консульиацию с юристом по банкротству
+          </div>
+          <div class="about-rating-contacts__phone">
+            <a href="tel:+79238884587" title="Позвонить">+7 923 888-45-87</a>
+            (Бесплатная консультация)
+          </div>
+          <div>
+            или написать нам в:
+            <div class="about-rating__messengers messengers">
+              <a href="whatsapp://send?phone=79264496896" title="Написать в WhatsApp" class="messengers__link">
+                <img src="/images/icon-whatsapp-gray.svg" class="messengers__icon">
+                <div class="messengers__name">WhatsApp</div>
+              </a>
+              <a href="tg://resolve?domain=kan_nik" title="Написать в Telegram" class="messengers__link">
+                <img src="/images/icon-telegram-gray.svg" class="messengers__icon">
+                <div class="messengers__name">Telegram</div>
+              </a>
+            </div>
+          </div>
+          <button class="button button_big button_white">Подбор организации <span class="icon icon-blue icon-arrow"></span></button>
+        </div>
+
+      </div>
+    </div>
+
+    <!--Три лучших-->
+    <div class="top-companies">
+      <div class="top-companies__inner">
+
+        <h2>Топ 3 лучших компаний <b>в этом месяце</b></h2>
+
+        <div class="top-companies__wrapper">
+          <div class="top-companies__list">
+
+            <div class="top-companies__item top-company">
+              <div class="top-company__header">
+                <div class="top-company__photo">
+                  <img src="/pictures/company-photo-1.jpg" alt="">
+                </div>
+                <div class="top-company__name">
+                  Дело мастера
+                  <div class="top-company__rating">
+                    4.5
+                    <div class="top-company__stars rating-stars js-rating" data-rating="4.5">
+                      <img src="/images/icon-stars-gray.svg" alt="" class="rating-stars__gray">
+                      <div class="rating-stars__yellow"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="company-labels">
+                <div class="company-labels__item company-labels__action">
+                  <span class="icon icon-action"></span> Акция
+                </div>
+                <div class="company-labels__item company-labels__best-price">
+                  <span class="icon icon-best-price"></span> Лучшая цена
+                </div>
+                <div class="company-labels__item company-labels__hit">
+                  <span class="icon icon-hit"></span> Хит
+                </div>
+              </div>
+              <div class="top-company__estimations company-estimations">
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-star.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Итоговая оценка: <b>4,9</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-lightning.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Быстро: <b>4,6</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-okay.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Качественно: <b>4,8</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-smile.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Дешево: <b>5</b>
+                  </div>
+                </div>
+              </div>
+              <div class="top-company__footer">
+                <div class="top-company__count">
+                  Заявок оставлено: <b class="js-number">1386</b>
+                </div>
+                <div class="top-company__button">
+                  <button class="button">Оставить заявку <span class="icon icon-white icon-arrow"></span></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="top-companies__item top-company">
+              <div class="top-company__header">
+                <div class="top-company__photo">
+                  <img src="/pictures/company-photo-2.jpg" alt="">
+                </div>
+                <div class="top-company__name">
+                  Дело мастера
+                  <div class="top-company__rating">
+                    3
+                    <div class="top-company__stars rating-stars js-rating" data-rating="3">
+                      <img src="/images/icon-stars-gray.svg" alt="" class="rating-stars__gray">
+                      <div class="rating-stars__yellow"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="company-labels">
+                <div class="company-labels__item company-labels__action">
+                  <span class="icon icon-action"></span> Акция
+                </div>
+                <div class="company-labels__item company-labels__best-price">
+                  <span class="icon icon-best-price"></span> Лучшая цена
+                </div>
+                <div class="company-labels__item company-labels__hit">
+                  <span class="icon icon-hit"></span> Хит
+                </div>
+              </div>
+              <div class="top-company__estimations company-estimations">
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-star.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Итоговая оценка: <b>4,9</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-lightning.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Быстро: <b>4,6</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-okay.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Качественно: <b>4,8</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-smile.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Дешево: <b>5</b>
+                  </div>
+                </div>
+              </div>
+              <div class="top-company__footer">
+                <div class="top-company__count">
+                  Заявок оставлено: <b class="js-number">1386</b>
+                </div>
+                <div class="top-company__button">
+                  <button class="button">Оставить заявку <span class="icon icon-white icon-arrow"></span></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="top-companies__item top-company">
+              <div class="top-company__header">
+                <div class="top-company__photo">
+                  <img src="/pictures/company-photo-3.jpg" alt="">
+                </div>
+                <div class="top-company__name">
+                  Дело мастера
+                  <div class="top-company__rating">
+                    3
+                    <div class="top-company__stars rating-stars js-rating" data-rating="3">
+                      <img src="/images/icon-stars-gray.svg" alt="" class="rating-stars__gray">
+                      <div class="rating-stars__yellow"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="company-labels">
+                <div class="company-labels__item company-labels__action">
+                  <span class="icon icon-action"></span> Акция
+                </div>
+                <div class="company-labels__item company-labels__best-price">
+                  <span class="icon icon-best-price"></span> Лучшая цена
+                </div>
+                <div class="company-labels__item company-labels__hit">
+                  <span class="icon icon-hit"></span> Хит
+                </div>
+              </div>
+              <div class="top-company__estimations company-estimations">
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-star.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Итоговая оценка: <b>4,9</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-lightning.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Быстро: <b>4,6</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-okay.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Качественно: <b>4,8</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-smile.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Дешево: <b>5</b>
+                  </div>
+                </div>
+              </div>
+              <div class="top-company__footer">
+                <div class="top-company__count">
+                  Заявок оставлено: <b class="js-number">1386</b>
+                </div>
+                <div class="top-company__button">
+                  <button class="button">Оставить заявку <span class="icon icon-white icon-arrow"></span></button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--Рейтинг компаний-->
+    <div class="companies-rating">
+      <div class="companies-rating__inner">
+
+        <!--Фильтр рейтинга компаний-->
+        <div class="companies-rating__filter rating-filter">
+          <div class="filter-companies">
+            <a href="" class="filter-companies__item is-active" title="LG">LG</a>
+            <a href="" class="filter-companies__item" title="Bosch">Bosch</a>
+            <a href="" class="filter-companies__item" title="Indesit">Indesit</a>
+            <a href="" class="filter-companies__item" title="Midea">Midea</a>
+            <a href="" class="filter-companies__item" title="KRONA KAYA">KRONA KAYA</a>
+            <a href="" class="filter-companies__item" title="Haier">Haier</a>
+            <a href="" class="filter-companies__item" title="Beko">Beko</a>
+            <a href="" class="filter-companies__item" title="Samsung">Samsung</a>
+            <a href="" class="filter-companies__item" title="ATLANT">ATLANT</a>
+            <a href="" class="filter-companies__item" title="MAUNFELD">MAUNFELD</a>
+            <a href="" class="filter-companies__all" title="Показать все компании">Показать остальные</a>
+          </div>
+        </div>
+
+        <div class="companies-rating__inform">
+          🔎 Мы нашли для вас 👉 <b>110 организаций</b> по ремонту стиральных машин рядом с <b>метро Кунцевская</b>, 💬 <b>463 отзыва</b>, контакты, актуальные цены и услуги.
+        </div>
+
+        <div class="companies-rating__list">
+
+          <div class="rating-company">
+            <div class="rating-company__photo">
+              <img src="/pictures/company-photo-1.jpg" alt="">
+            </div>
+            <div class="rating-company__about">
+              <div class="rating-company__header">
+                <div class="rating-company__name">Сервисный центр “Дело мастера”</div>
+                <div class="rating-company__labels company-labels">
+                  <div class="company-labels__item company-labels__action">
+                    <span class="icon icon-action"></span> Акция
+                  </div>
+                  <div class="company-labels__item company-labels__best-price">
+                    <span class="icon icon-best-price"></span> Лучшая цена
+                  </div>
+                  <div class="company-labels__item company-labels__hit">
+                    <span class="icon icon-hit"></span> Хит
+                  </div>
+                </div>
+              </div>
+              <div class="rating-company__description">
+                <span>10 мин.</span> <span class="icon-gray icon-human"></span>
+                <span>Новокосино</span> <span class="icon-gray icon-arrow"></span>
+                <span>Суздальская улица, 40к2, Москва</span>
+              </div>
+              <div class="rating-company__estimations company-estimations">
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-star.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Итоговая оценка: <b>4,9</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-lightning.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Быстро: <b>4,6</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-okay.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Качественно: <b>4,8</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-smile.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Дешево: <b>5</b>
+                  </div>
+                </div>
+              </div>
+              <div class="rating-company__props">
+                <span>· Цена: <b>от <span class="js-number">800</span> ₽</b></span>
+                <span>· Оставлено заявок: <b class="js-number">86838</b></span>
+                <span>· Сертификат: <b>Есть</b></span>
+                <span>· Обновлено: <b>15.04.2023</b></span>
+              </div>
+              <div class="rating-company__text">
+                Команда сервисного центра «Смарт Сервис» на протяжении 7 лет работает в Москве, занимается ремонтом любой техники, которая подлежит восстановлению. Мастера дают гарантию на оказанные ...
+              </div>
+            </div>
+            <div class="rating-company__rating">
+              <div>
+                Рейтинг компании <b>(4.5)</b>
+              </div>
+              <div class="rating-company__stars rating-stars js-rating" data-rating="4.5">
+                <img src="/images/icon-stars-gray.svg" alt="" class="rating-stars__gray">
+                <div class="rating-stars__yellow"></div>
+              </div>
+              <div class="rating-company__reviews">
+                <span class="icon-gray icon-reviews"></span> 171 отзывов
+              </div>
+              <div class="rating-company__rating-button">
+                <button class="button">Оставить заявку <span class="icon icon-white icon-arrow"></span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rating-company">
+            <div class="rating-company__photo">
+              <img src="/pictures/company-photo-2.jpg" alt="">
+            </div>
+            <div class="rating-company__about">
+              <div class="rating-company__header">
+                <div class="rating-company__name">Сервисный центр “WeFix”</div>
+              </div>
+              <div class="rating-company__description">
+                <span>10 мин.</span> <span class="icon-gray icon-human"></span>
+                <span>Новокосино</span> <span class="icon-gray icon-arrow"></span>
+                <span>Суздальская улица, 40к2, Москва</span>
+              </div>
+              <div class="rating-company__estimations company-estimations">
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-star.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Итоговая оценка: <b>4,9</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-lightning.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Быстро: <b>4,6</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-okay.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Качественно: <b>4,8</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-smile.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Дешево: <b>5</b>
+                  </div>
+                </div>
+              </div>
+              <div class="rating-company__props">
+                <span>· Цена: <b>от <span class="js-number">800</span> ₽</b></span>
+                <span>· Оставлено заявок: <b class="js-number">86838</b></span>
+                <span>· Сертификат: <b>Есть</b></span>
+                <span>· Обновлено: <b>15.04.2023</b></span>
+              </div>
+              <div class="rating-company__text">
+                Команда сервисного центра «Смарт Сервис» на протяжении 7 лет работает в Москве, занимается ремонтом любой техники, которая подлежит восстановлению. Мастера дают гарантию на оказанные ...
+              </div>
+            </div>
+            <div class="rating-company__rating">
+              <div>
+                Рейтинг компании <b>(3.75)</b>
+              </div>
+              <div class="rating-company__stars rating-stars js-rating" data-rating="3.75">
+                <img src="/images/icon-stars-gray.svg" alt="" class="rating-stars__gray">
+                <div class="rating-stars__yellow"></div>
+              </div>
+              <div class="rating-company__reviews">
+                <span class="icon-gray icon-reviews"></span> 171 отзывов
+              </div>
+              <div class="rating-company__rating-button">
+                <button class="button">Оставить заявку <span class="icon icon-white icon-arrow"></span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rating-company">
+            <div class="rating-company__photo">
+              <img src="/pictures/company-photo-3.jpg" alt="">
+            </div>
+            <div class="rating-company__about">
+              <div class="rating-company__header">
+                <div class="rating-company__name">Сервисный центр “Починим мигом!”</div>
+              </div>
+              <div class="rating-company__description">
+                <span>10 мин.</span> <span class="icon-gray icon-human"></span>
+                <span>Новокосино</span> <span class="icon-gray icon-arrow"></span>
+                <span>Суздальская улица, 40к2, Москва</span>
+              </div>
+              <div class="rating-company__estimations company-estimations">
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-star.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Итоговая оценка: <b>4,9</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-lightning.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Быстро: <b>4,6</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-okay.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Качественно: <b>4,8</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-smile.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Дешево: <b>5</b>
+                  </div>
+                </div>
+              </div>
+              <div class="rating-company__props">
+                <span>· Цена: <b>от <span class="js-number">800</span> ₽</b></span>
+                <span>· Оставлено заявок: <b class="js-number">86838</b></span>
+                <span>· Сертификат: <b>Есть</b></span>
+                <span>· Обновлено: <b>15.04.2023</b></span>
+              </div>
+              <div class="rating-company__text">
+                Команда сервисного центра «Смарт Сервис» на протяжении 7 лет работает в Москве, занимается ремонтом любой техники, которая подлежит восстановлению. Мастера дают гарантию на оказанные ...
+              </div>
+            </div>
+            <div class="rating-company__rating">
+              <div>
+                Рейтинг компании <b>(2.8)</b>
+              </div>
+              <div class="rating-company__stars rating-stars js-rating" data-rating="2.8">
+                <img src="/images/icon-stars-gray.svg" alt="" class="rating-stars__gray">
+                <div class="rating-stars__yellow"></div>
+              </div>
+              <div class="rating-company__reviews">
+                <span class="icon-gray icon-reviews"></span> 171 отзывов
+              </div>
+              <div class="rating-company__rating-button">
+                <button class="button">Оставить заявку <span class="icon icon-white icon-arrow"></span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="banner">
+            Здесь будет баннер
+          </div>
+
+          <div class="rating-company">
+            <div class="rating-company__photo">
+              <img src="/pictures/company-photo-4.jpg" alt="">
+            </div>
+            <div class="rating-company__about">
+              <div class="rating-company__header">
+                <div class="rating-company__name">Сервисный центр FIXIT.CENTER</div>
+              </div>
+              <div class="rating-company__description">
+                <span>10 мин.</span> <span class="icon-gray icon-human"></span>
+                <span>Новокосино</span> <span class="icon-gray icon-arrow"></span>
+                <span>Суздальская улица, 40к2, Москва</span>
+              </div>
+              <div class="rating-company__estimations company-estimations">
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-star.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Итоговая оценка: <b>4,9</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-lightning.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Быстро: <b>4,6</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-okay.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Качественно: <b>4,8</b>
+                  </div>
+                </div>
+                <div class="company-estimations__item">
+                  <div class="company-estimations__icon">
+                    <img src="/images/icon-yellow-smile.png" alt="">
+                  </div>
+                  <div class="company-estimations__text">
+                    Дешево: <b>5</b>
+                  </div>
+                </div>
+              </div>
+              <div class="rating-company__props">
+                <span>· Цена: <b>от <span class="js-number">800</span> ₽</b></span>
+                <span>· Оставлено заявок: <b class="js-number">86838</b></span>
+                <span>· Сертификат: <b>Есть</b></span>
+                <span>· Обновлено: <b>15.04.2023</b></span>
+              </div>
+              <div class="rating-company__text">
+                Команда сервисного центра «Смарт Сервис» на протяжении 7 лет работает в Москве, занимается ремонтом любой техники, которая подлежит восстановлению. Мастера дают гарантию на оказанные ...
+              </div>
+            </div>
+            <div class="rating-company__rating">
+              <div>
+                Рейтинг компании <b>(5)</b>
+              </div>
+              <div class="rating-company__stars rating-stars js-rating" data-rating="5">
+                <img src="/images/icon-stars-gray.svg" alt="" class="rating-stars__gray">
+                <div class="rating-stars__yellow"></div>
+              </div>
+              <div class="rating-company__reviews">
+                <span class="icon-gray icon-reviews"></span> 171 отзывов
+              </div>
+              <div class="rating-company__rating-button">
+                <button class="button">Оставить заявку <span class="icon icon-white icon-arrow"></span></button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="companies-rating__more">
+          <a href="" class="" title="Показать еще">Показать ещё <span class="icon-arrow"></span></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="actions">
+      <div class="actions__inner">
+        <h2><b>Акции и скидки</b></h2>
+
+        <div class="actions__list">
+          <div class="actions__item actions__item-1">
+            <div class="actions__title">
+              Подарок 1 500 ₽ на&nbsp;следующий ремонт в&nbsp;нашем центре
+            </div>
+            <div class="actions__text">
+              Lorem Ipsum является текст-заполнитель обычно используется ...
+            </div>
+            <a href="" title="Подробнее" class="actions__link"><span class="actions__link-anchor">Подробнее</span><span class="icon-blue icon-arrow"></span></a>
+          </div>
+
+          <div class="actions__item actions__item-2">
+            <div class="actions__title">
+              Скидка 25% на&nbsp;ремонт при заказе с&nbsp;сайта
+            </div>
+            <div class="actions__text">
+              Lorem Ipsum является текст-заполнитель обычно используется ...
+            </div>
+            <a href="" title="Подробнее" class="actions__link"><span class="actions__link-anchor">Подробнее</span><span class="icon-blue icon-arrow"></span></a>
+          </div>
+
+          <div class="actions__item actions__item-3">
+            <div class="actions__title">
+              Пенсионерам скидка 15% на любой вид ремонта
+            </div>
+            <div class="actions__text">
+              Lorem Ipsum является текст-заполнитель обычно используется ...
+            </div>
+            <a href="" title="Подробнее" class="actions__link"><span class="actions__link-anchor">Подробнее</span><span class="icon-blue icon-arrow"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+
+<div id="popup" class="popup popup_hide">
+  <div class="popup__block">
+    <div class="popup__body"><!-- Место для блока попап --></div>
+    <div class="popup__close js-close-popup">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.75 1.85637L12.1436 0.25L7 5.39363L1.85637 0.25L0.25 1.85637L5.39363 7L0.25 12.1436L1.85637 13.75L7 8.60637L12.1436 13.75L13.75 12.1436L8.60637 7L13.75 1.85637Z" fill="#"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!--Короткий popup для отправки номера телефона -->
+<div id="phone-popup" class="popup-source">
+  <div class="popup-request">
+    <div class="popup-request__name"></div>
+    <div class="popup-request__text">
+      Оставьте заявку и мы свяжемся с&nbsp;вами в течение 5-10 минут
+    </div>
+    <form class="popup-request__form">
+      <input type="hidden" name="form-target" value="" title="">
+      <input type="tel" name="telephone" placeholder="+7 (___) ___-__-__" title="" class="input popup-request__input">
+      <button type="submit" class="button popup-request__button">Отправить</button>
+      <div class="popup-request__rules rules-form">
+        <div class="rules-form__checkbox checkbox">
+          <label class="checkbox__label">
+            <input type="checkbox" title="" class="checkbox__input">
+            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.31055 4.81836L3.51168 6.78098C3.99065 7.23632 4.75123 7.20573 5.19212 6.71337L9.86523 1.03906" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </label>
+        </div>
+        <div class="rules-form__text">
+          Нажимая кнопку вы соглашаетесь с условиями <a href="" target="_blank" title="Политики конфиденциальности" class="rules-form__link">Политики конфиденциальности</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

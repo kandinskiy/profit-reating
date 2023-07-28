@@ -1,0 +1,243 @@
+.companies-rating {
+  position: relative;
+  padding: rem(80) 0 0;
+
+  &__inner {
+    @extend .inner;
+  }
+
+  &__inform {
+    margin-top: rem(22);
+    font-size: rem(14);
+    color: $gray;
+  }
+
+  &__list {
+    margin-top: rem(40);
+    display: flex;
+    gap: rem(20);
+    flex-direction: column;
+  }
+
+  &__more {
+    margin-top: rem(20);
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      display: flex;
+      gap: rem(4);
+      align-items: center;
+      font: rem(14)/1 $fontMedium;
+      color: $gray;
+      text-decoration: none;
+      transition: color .3s linear;
+
+      .icon-arrow {
+        background: $gray;
+        width: rem(9.8);
+        height: rem(11);
+        transform: rotate(90deg);
+        transition: background .3s linear;
+      }
+
+      &:hover {
+        color: #00ade6;
+
+        .icon-arrow {
+          background: #00ade6;
+        }
+      }
+    }
+  }
+}
+
+.rating-filter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  padding: rem(30);
+  border-radius: rem(10);
+  box-shadow: 0 rem(7) rem(40) 0 rgba(51, 65, 72, 0.1);
+}
+
+.filter-companies {
+  display: flex;
+  gap: rem(15);
+  align-items: baseline;
+  overflow: hidden;
+
+  &__item {
+    height: rem(60);
+    padding: 1px rem(24) 0;
+    display: flex;
+    align-items: center;
+    border-radius: rem(5);
+    background: #F6F7F8;
+    white-space: nowrap;
+    color: $gray;
+    text-decoration: none;
+    transition: all .3s linear;
+
+    &:hover {
+      background: #EAFAFF;
+      color: #00ADE6;
+    }
+
+    &.is-active {
+      border: 1px solid #00ADE6;
+      background: #ffffff;
+      color: #00ADE6;
+    }
+  }
+
+  &__all {
+    color: $gray;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-left: rem(20);
+    border-bottom: 1px dotted;
+    transition: color .3s linear;
+
+    &:hover {
+      color: #00ADE6;
+    }
+
+    &.is-active {
+      display: none;
+    }
+  }
+}
+
+.rating-company {
+  position: relative;
+  padding: rem(40);
+  border: 1px solid #EDECEC;
+  display: flex;
+  gap: rem(30);
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: rem(21);
+    left: 0;
+    transform: translateX(-50%);
+    width: rem(38);
+    height: rem(38);
+  }
+
+  &:nth-child(1):before {
+    background: url("/images/icon-place-1.png") no-repeat {
+      size: contain;
+    };
+  }
+
+  &:nth-child(2):before {
+    background: url("/images/icon-place-2.png") no-repeat {
+      size: contain;
+    };
+  }
+
+  &:nth-child(3):before {
+    background: url("/images/icon-place-3.png") no-repeat {
+      size: contain;
+    };
+  }
+
+  &__photo {
+    flex: 0 rem(312);
+
+    img {
+      @include img-100;
+      border-radius: rem(10);
+    }
+  }
+
+  &__about {
+    flex: 1;
+    display: flex;
+    gap: rem(15);
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    gap: rem(10);
+  }
+
+  &__name {
+    flex: 0 auto;
+    display: inline-flex;
+    font-family: $fontBold;
+    font-size: rem(20);
+  }
+
+  &__labels {
+    flex: 0 max-content;
+    align-items: center;
+    height: rem(30);
+  }
+
+  &__description {
+    height: rem(14);
+    margin-top: rem(-10);
+    display: flex;
+    gap: rem(6);
+    align-items: center;
+    font-size: rem(12);
+    color: $gray;
+
+    .icon-human {
+      width: rem(9.3);
+      height: rem(14);
+    }
+
+    .icon-arrow {
+      width: rem(9);
+      height: rem(8);
+    }
+  }
+
+  &__estimations {
+    font-size: rem(14);
+  }
+
+  &__props {
+    display: flex;
+    gap: rem(15);
+  }
+
+  &__text {
+    font: rem(14)/1.5 $fontRegular;
+    color: $gray;
+  }
+
+  &__rating {
+    flex: 0 rem(207);
+    display: flex;
+    gap: rem(20);
+    flex-direction: column;
+    font-size: rem(14);
+  }
+
+  &__stars {
+    margin-top: rem(-10);
+    height: rem(24);
+    width: max-content;
+  }
+
+  &__reviews {
+    display: flex;
+    gap: rem(8);
+    align-items: center;
+    color: $gray;
+
+    .icon-reviews {
+      width: rem(18);
+      height: rem(18);
+    }
+  }
+}

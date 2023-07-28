@@ -1,0 +1,213 @@
+@import 'vars';
+@import 'mixins';
+
+.about-rating {
+  position: relative;
+  z-index: 0;
+  margin: rem(40) 0 0;
+
+  &__inner {
+    @extend .inner;
+    display: grid;
+    gap: rem(20);
+    grid-template:
+        "text" auto
+        "blocks" auto
+        "contacts" auto
+      / auto ;
+
+    @include media('min', $tablet) {
+      gap: rem(40);
+    }
+
+    @include media('min', $desktop) {
+      gap: rem(20);
+      grid-template:
+          "text contacts" auto
+          "blocks contacts" max-content
+      / auto rem(345);
+    }
+  }
+
+  &__text {
+    grid-area: text;
+
+    h1 {
+      font-family: $fontRegular;
+      font-size: rem(18);
+
+      @include media('min', $tablet) {
+        font-size: rem(24);
+      }
+
+      @include media('min', $desktop) {
+        font-size: rem(38);
+      }
+    }
+
+    p {
+      margin-top: rem(20);
+      font-size: rem(12);
+      color: $gray;
+
+      @include media('min', $tablet) {
+        font-size: rem(14);
+      }
+
+      @include media('min', $desktop) {
+        font-size: rem(16);
+      }
+    }
+
+    p + p {
+      margin-top: rem(30);
+    }
+  }
+
+  &__contacts {
+    grid-area: contacts;
+  }
+
+  &__messengers {
+    display: inline-flex;
+
+    @include media('min', $desktop) {
+      display: flex;
+    }
+  }
+
+  &__blocks {
+    grid-area: blocks;
+  }
+}
+
+.about-rating-contacts {
+  padding: rem(40);
+  display: flex;
+  gap: rem(20);
+  flex-direction: column;
+  border-radius: rem(10);
+  background: #F6F7F8 url("/images/bg-reating-contacts.png") top right no-repeat {
+    size: rem(244) auto;
+  };
+  font: rem(14)/1.5 $fontRegular;
+
+  &__icon {
+    width: rem(44);
+
+    img {
+      @include img-100;
+    }
+  }
+
+  &__text {
+    @include media('min', $tablet) {
+      width: rem(350);
+    }
+
+    @include media('min', $desktop) {
+      width: auto;
+    }
+
+    b {
+      display: block;
+      margin-bottom: rem(5);
+      font-size: rem(22);
+    }
+  }
+
+  &__phone {
+    font: rem(14)/1.2 $fontRegular;
+    color: $gray;
+
+    a {
+      font: rem(16)/1.2 $fontBold;
+      color: $black;
+      text-decoration: none;
+
+      @include media('min', $desktop) {
+        font-size: rem(22);
+        display: block;
+      }
+    }
+  }
+
+  .messengers {
+    gap: rem(10);
+    font-family: $fontSemibold;
+  }
+
+  .messengers__icon {
+    height: rem(15);
+  }
+
+  button {
+    font-size: rem(12);
+
+    @include media('min', $tablet) {
+      width: rem(230);
+    }
+    @include media('min', $desktop) {
+      width: auto;
+      font-size: rem(14);
+    }
+  }
+}
+
+.about-rating-blocks {
+  display: grid;
+  gap: rem(20);
+  grid-template-columns: 1fr;
+
+  @include media('min', $tablet) {
+    display: grid;
+    gap: rem(10);
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media('min', $desktop) {
+    gap: rem(20);
+  }
+
+  &__item {
+    padding: rem(20);
+    border: 1px solid #EAEBF2;
+    border-radius: rem(10);
+    background: #ffffff;
+    display: flex;
+    gap: rem(10);
+    align-items: flex-start;
+
+    @include media('min', $tablet) {
+      gap: rem(15);
+      flex-direction: column;
+    }
+
+    @include media('min', $desktop) {
+      padding: rem(30) rem(40) rem(30) rem(30);
+      gap: rem(29);
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    flex: 0 rem(46);
+
+    img {
+      @include img-100;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    font: rem(12)/1.5 $fontRegular;
+
+    @include media('min', $tablet) {
+      font-size: rem(14);
+    }
+    @include media('min', $desktop) {
+      font-size: rem(16);
+    }
+  }
+}

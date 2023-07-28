@@ -1,0 +1,302 @@
+@import 'vars';
+@import 'mixins';
+
+//Подключение шрифтов
+@include font-face('Montserrat-Regular');
+@include font-face('Montserrat-Medium', '500');
+@include font-face('Montserrat-Bold', 'bold');
+@include font-face('Montserrat-SemiBold', 700);
+@include font-face('Montserrat-ExtraBold', 800);
+
+html {
+  @include scrollbar-design;
+  height: 100%;
+  @include adaptive(
+          font-size,
+          #{calc-between-width(320, 16, 719, 36)},
+          $tablet #{calc-between-width(720, 16, 1024, 23)},
+          $desktop #{calc-between-width(1024, 8.5, 1920, 16)},
+              (1920, 16)
+  );
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  font: rem(14)/1.4 $fontRegular;
+  color: $black;
+  overflow-x: hidden;
+}
+
+.body-bg:before {
+  content: '';
+  background: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: .6;
+}
+
+h1, .h1 {
+  font-family: $fontBold;
+  @include adaptive(font-size, rem(22), $tablet rem(28), $desktop rem(38));
+  font-weight: normal;
+
+  small {
+    font-family: $fontRegular;
+    font-size: inherit;
+  }
+}
+
+h2, .h2 {
+  font-family: $fontRegular;
+  font-weight: normal;
+  @include adaptive(font-size, rem(18), $tablet rem(28), $desktop rem(32));
+}
+
+a {
+  color: inherit;
+}
+
+b {
+  font-family: $fontBold;
+  font-weight: normal;
+}
+
+.img-size-100 {
+  width: 100%;
+  height: auto;
+  vertical-align: baseline;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 320px;
+  min-height: 100%;
+
+  @include media('min', $desktop) {
+    width: rem(1920);
+  }
+}
+
+.inner {
+  max-width: rem(1440);
+  padding: 0 rem(20);
+
+  @include media('min', $tablet) {
+    padding: 0 rem(40);
+  }
+
+  @include media('min', $desktop) {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.section {
+  position: relative;
+}
+
+.messengers {
+  display: flex;
+  align-items: center;
+  gap: rem(5);
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(4);
+    text-decoration: none;
+    color: $gray;
+  }
+
+  &__icon {
+    height: rem(13);
+    width: auto;
+    vertical-align: baseline;
+  }
+
+  &__name {
+    border-bottom: 1px dotted;
+  }
+}
+
+.flare-animation {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    width: rem(30);
+    height: 200%;
+    position: absolute;
+    left: rem(30);
+    top: 50%;
+    transform: translateY(-50%) rotate(20deg);
+    z-index: 0;
+    background: #ffffff;
+    opacity: .3;
+    animation: flareAnimation 2s infinite linear;
+  }
+}
+
+@keyframes flareAnimation {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 400%;
+  }
+}
+
+.company-labels {
+  display: inline-flex;
+  gap: rem(10);
+
+  &__item {
+    height: rem(22);
+    padding: 1px rem(5) 0;
+    border: 1px solid;
+    border-radius: rem(3);
+    background: #ffffff;
+    display: flex;
+    gap: rem(5);
+    align-items: center;
+    white-space: nowrap;
+    font: rem(10)/1 $fontBold;
+    text-transform: uppercase;
+
+    @include media('min', $desktop) {
+      height: rem(22);
+      padding: 1px rem(8) 0;
+      font-size: rem(12);
+    }
+  }
+
+  &__action {
+    border-color: #D72B36;
+    color: #D72B36;
+
+    .icon {
+      background: #D72B36;
+      width: rem(8.5);
+      height: rem(15);
+    }
+  }
+
+  &__best-price {
+    border-color: #45D068;
+    color: #45D068;
+
+    .icon {
+      background: #45D068;
+      width: rem(11.6);
+      height: rem(12);
+    }
+  }
+
+  &__hit {
+    border-color: #EB9249;
+    color: #EB9249;
+
+    .icon {
+      background: #EB9249;
+      width: rem(13.7);
+      height: rem(10);
+    }
+  }
+}
+
+.company-estimations {
+  display: flex;
+  gap: rem(8);
+  flex-wrap: wrap;
+  font-size: inherit;
+  align-items: stretch;
+
+  &__item {
+    display: flex;
+    gap: rem(8);
+    align-items: center;
+    height: rem(32);
+    padding: 1px rem(12) 0;
+    border: 1px solid #E0E0E3;
+    border-radius: rem(5);
+    white-space: nowrap;
+    font-size: inherit;
+  }
+
+  &__icon {
+    flex: 1 rem(16);
+    width: rem(16);
+
+    img {
+      display: block;
+      @include img-100;
+    }
+  }
+
+  &__text {
+    flex: 0 max-content;
+    padding-top: 1px;
+  }
+}
+
+.rating-stars {
+  position: relative;
+
+  &__gray {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: auto;
+    vertical-align: top;
+  }
+
+  &__yellow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 0;
+    height: 100%;
+    background: url("/images/icon-stars-yellow.svg") 0 0 no-repeat {
+      size: auto 100%;
+    };
+    transition: width .3s linear;
+  }
+}
+
+.rules-form {
+  position: relative;
+  display: flex;
+  gap: rem(8);
+  align-items: center;
+  font-size: rem(10);
+  color: $gray;
+
+  @include media('min', $tablet) {
+    font-size: rem(12);
+  }
+
+  &__checkbox {
+    flex-shrink: 1;
+  }
+
+  &__text {
+    flex: 1 min-content;
+  }
+
+  &__link {
+    font-family: $fontBold;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

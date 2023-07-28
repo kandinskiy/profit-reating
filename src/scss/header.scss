@@ -1,0 +1,344 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: #ffffff;
+  font-size: rem(12);
+  box-shadow: 0 rem(20) rem(70) rem(10) rgba(51, 65, 72, 0.05);
+
+  &__inner {
+    @extend .inner;
+    height: rem(50);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media('min', $tablet) {
+      height: rem(64);
+    }
+
+    @include media('min', $desktop) {
+      height: rem(90);
+    }
+  }
+}
+
+.header-logo {
+  flex: 0 1 rem(47);
+
+  @include media('min', $tablet) {
+    flex: 0 1 rem(64);
+  }
+
+  @include media('min', $desktop) {
+    display: grid;
+    align-items: center;
+    gap: rem(8) rem(14);
+    grid-template:
+      'img text' max-content
+      'img date' max-content
+      /rem(115) max-content;
+  }
+
+  &__img {
+    a {
+      display: flex;
+    }
+
+    img {
+      @extend .img-size-100;
+    }
+
+    @include media('min', $desktop) {
+      grid-area: img;
+
+      .header_sticky & {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    display: none;
+
+    @include media('min', $desktop) {
+      grid-area: text;
+      display: block;
+    }
+  }
+
+  &__date {
+    display: none;
+
+    @include media('min', $desktop) {
+      grid-area: date;
+      display: block;
+      color: $gray;
+
+      .header_sticky & {
+        display: none;
+      }
+    }
+  }
+}
+
+.header-contacts {
+  display: flex;
+  gap: rem(20);
+  align-items: center;
+
+  &__numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__messengers {
+    display: none;
+
+    @include media('min', $desktop) {
+      display: block;
+    }
+  }
+
+  &__phone {
+    font-size: rem(14);
+    font-family: $fontBold;
+    text-decoration: none;
+
+    @include media('min', $tablet) {
+      font-size: rem(16);
+    }
+
+    @include media('min', $desktop) {
+      font-size: rem(18);
+    }
+  }
+
+  &__callback {
+    margin-top: rem(1);
+    border-bottom: 1px dotted;
+    font-family: $fontBold;
+    color: #00ADE6;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.header-choice {
+  padding: rem(20);
+  background: #ffffff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: calc(100vh - #{rem(50)});
+  height: calc((var(--vh, 1vh) * 100) - #{rem(50)});
+  display: none;
+  gap: rem(20);
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &.is-open {
+    display: flex;
+  }
+
+  @include media('min', $tablet) {
+    position: absolute;
+    top: 100%;
+    height: auto;
+    padding: rem(20) rem(40);
+    flex-direction: row;
+  }
+
+  @include media('min', $desktop) {
+    display: flex;
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: auto;
+  }
+
+  &__block {
+    display: grid;
+    gap: 0 rem(10);
+    grid-template:
+        "icon name" auto
+        "icon link" auto
+      /rem(40) auto;
+    text-decoration: none;
+    align-items: center;
+
+    @include media('min', $tablet) {
+      flex: 0 1 calc(50% - rem(20)/2);
+    }
+
+    @include media('min', $desktop) {
+      flex: auto;
+    }
+  }
+
+  &__icon {
+    width: rem(40);
+    grid-area: icon;
+    height: auto;
+    vertical-align: baseline;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__link {
+    grid-area: link;
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+
+    img {
+      width: rem(8);
+      height: auto;
+      vertical-align: baseline;
+    }
+
+    span {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-family: $fontBold;
+      border-bottom: 1px dotted;
+    }
+  }
+
+  &__messengers {
+    margin-top: rem(5);
+    gap: rem(10);
+
+    @include media('min', $tablet) {
+      display: none;
+    }
+  }
+
+  @include media('min', $desktop) {
+    &__city {
+      width: rem(49);
+    }
+
+    &__district {
+      width: rem(55);
+    }
+
+    &__metro {
+      width: rem(88);
+    }
+
+    &__type {
+      width: rem(164);
+    }
+  }
+}
+
+.nav-appointment {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(5);
+  padding: rem(14) rem(74) rem(14) rem(24);
+  width: rem(181);
+  background: url('/images/header-appointment.png') right bottom no-repeat {
+    size: auto 95%;
+  };
+  @include bg-color-gradient(-1);
+  border-radius: rem(5);
+  text-align: center;
+  font-family: $fontBold;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  @extend .flare-animation;
+  transition: background-color .3s linear;
+
+  &:hover {
+    background: #2DA3F1;
+  }
+
+  @include media('min', $tablet) {
+    display: none;
+  }
+
+  span {
+    position: revert;
+    z-index: 2;
+  }
+}
+
+.header-appointment {
+  display: none;
+  position: relative;
+  @extend .flare-animation;
+  transition: background-color .3s linear;
+  @include bg-color-gradient;
+
+  &:hover {
+    background: #2DA3F1;
+  }
+
+  @include media('min', $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(14) rem(24);
+    border-radius: rem(5);
+    text-align: center;
+    font-family: $fontBold;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  @include media('min', $desktop) {
+    .header:not(.header_sticky) & {
+      width: rem(181);
+      padding-right: rem(74);
+      background: url('/images/header-appointment.png') right bottom no-repeat {
+        size: auto 95%;
+      };
+      @include bg-color-gradient(-1);
+    }
+  }
+
+  span {
+    position: revert;
+    z-index: 2;
+  }
+}
+
+.header-link-menu {
+  display: flex;
+  color: $gray2;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  @include media('min', $desktop) {
+    display: none;
+  }
+
+  &__icon {
+    width: rem(24);
+    height: rem(24);
+    background: url('/images/icon-open-menu.png') no-repeat {
+      size: 100% 100%;
+    };
+    transition: background .3s linear;
+  }
+
+  &_open &__icon {
+    background: url('/images/icon-close-menu.png') no-repeat {
+      size: 100% 100%;
+    };
+  }
+}
