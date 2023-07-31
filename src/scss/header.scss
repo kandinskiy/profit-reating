@@ -182,14 +182,36 @@
   }
 
   &__icon {
-    width: rem(40);
     grid-area: icon;
-    height: auto;
-    vertical-align: baseline;
+    width: rem(34);
+    height: rem(34);
+    background: #F6F6F6;
+    border: 1px solid #EAEBF2;
+    border-radius: rem(5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media('min', $tablet) {
+      width: rem(40);
+      height: rem(40);
+    }
+
+    .icon {
+      background: $gray;
+      width: rem(15);
+      height: rem(15);
+
+      @include media('min', $tablet) {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
   }
 
   &__name {
     grid-area: name;
+    font-size: rem(12);
   }
 
   &__link {
