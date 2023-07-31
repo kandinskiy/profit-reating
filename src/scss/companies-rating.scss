@@ -15,14 +15,22 @@
   &__list {
     margin-top: rem(40);
     display: flex;
-    gap: rem(20);
     flex-direction: column;
+
+    @include media('min', $tablet) {
+      gap: rem(20);
+    }
   }
 
   &__more {
-    margin-top: rem(20);
+    padding-top: rem(20);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+
+    @include media('min', $tablet) {
+      justify-content: flex-end;
+      padding: 0;
+    }
 
     a {
       display: flex;
@@ -112,43 +120,116 @@
 }
 
 .rating-company {
+  overflow: hidden;
   position: relative;
-  padding: rem(40);
-  border: 1px solid #EDECEC;
-  display: flex;
-  gap: rem(30);
+  margin: 0 rem(-20);
+  padding: rem(20) rem(20) rem(83);
+  border-top: 1px solid #EDECEC;
+  display: grid;
+  gap: rem(15);
+  grid-template:
+      "photo" auto
+      "header" auto
+      "rating" auto
+      "description" auto
+      "props" auto
+      "text" auto
+       /auto;
+
+  @include media('max', $tablet) {
+    &:last-child {
+      border-bottom: 1px solid #EDECEC;
+    }
+  }
+
+  @include media('min', $tablet) {
+    padding: rem(20) rem(20) rem(88);
+    border: 1px solid #EDECEC;
+    gap: rem(10) rem(20);
+    grid-template:
+        "photo header" auto
+        "photo rating" auto
+        "photo description" auto
+        "props props" auto
+        "text text" auto
+       /rem(160) auto;
+  }
+
+  @include media('min', $desktop) {
+    overflow: visible;
+    padding: rem(40);
+    gap: rem(15) rem(30);
+    grid-template:
+      "photo header rating" auto
+      "photo description rating" auto
+      "photo estimations rating" auto
+      "photo props rating" auto
+      "photo text rating" auto
+       /rem(312) auto rem(207);
+  }
 
   &:before {
     content: '';
     display: block;
     position: absolute;
-    top: rem(21);
-    left: 0;
-    transform: translateX(-50%);
-    width: rem(38);
-    height: rem(38);
+    top: rem(20);
+    right: rem(27);
+    width: rem(50);
+    height: rem(50);
+
+    @include media('min', $tablet) {
+      width: rem(60);
+      height: rem(60);
+    }
+
+    @include media('min', $desktop) {
+      top: rem(11);
+      left: 0;
+      right: auto;
+      transform: translateX(-50%);
+      width: rem(58);
+      height: rem(58);
+    }
   }
 
   &:nth-child(1):before {
-    background: url("/images/icon-place-1.png") no-repeat {
+    background: url("/images/icon-medal-1.png") no-repeat {
       size: contain;
     };
+
+    @include media('min', $desktop) {
+      background: url("/images/icon-place-1.png") no-repeat {
+        size: contain;
+      };
+    }
   }
 
   &:nth-child(2):before {
-    background: url("/images/icon-place-2.png") no-repeat {
+    background: url("/images/icon-medal-2.png") no-repeat {
       size: contain;
     };
+
+    @include media('min', $desktop) {
+      background: url("/images/icon-place-2.png") no-repeat {
+        size: contain;
+      };
+    }
   }
 
   &:nth-child(3):before {
-    background: url("/images/icon-place-3.png") no-repeat {
+    background: url("/images/icon-medal-3.png") no-repeat {
       size: contain;
     };
+
+    @include media('min', $desktop) {
+      background: url("/images/icon-place-3.png") no-repeat {
+        size: contain;
+      };
+    }
   }
 
   &__photo {
-    flex: 0 rem(312);
+    grid-area: photo;
 
     img {
       @include img-100;
@@ -156,23 +237,26 @@
     }
   }
 
-  &__about {
-    flex: 1;
-    display: flex;
-    gap: rem(15);
-    flex-direction: column;
-  }
-
   &__header {
+    grid-area: header;
     display: flex;
     gap: rem(10);
+    flex-direction: column-reverse;
+
+    @include media('min', $desktop) {
+      flex-direction: row;
+    }
   }
 
   &__name {
     flex: 0 auto;
     display: inline-flex;
     font-family: $fontBold;
-    font-size: rem(20);
+    font-size: rem(16);
+
+    @include media('min', $desktop) {
+      font-size: rem(20);
+    }
   }
 
   &__labels {
@@ -182,13 +266,18 @@
   }
 
   &__description {
-    height: rem(14);
-    margin-top: rem(-10);
+    grid-area: description;
+    height: 100%;
     display: flex;
     gap: rem(6);
+    flex-wrap: wrap;
     align-items: center;
     font-size: rem(12);
     color: $gray;
+
+    @include media('min', $desktop) {
+      margin-top: rem(-5);
+    }
 
     .icon-human {
       width: rem(9.3);
@@ -202,31 +291,134 @@
   }
 
   &__estimations {
+    grid-area: estimations;
+    margin-top: rem(10);
     font-size: rem(14);
+
+    @include media('max', $desktop) {
+      display: none;
+    }
+
+    @include media('min', $tablet) {
+      margin-top: rem(15);
+    }
+
+    @include media('min', $desktop) {
+      margin-top: 0;
+    }
   }
 
   &__props {
+    grid-area: props;
+    margin-top: rem(10);
     display: flex;
-    gap: rem(15);
+    gap: rem(5);
+    flex-wrap: wrap;
+
+    @include media('min', $tablet) {
+      margin-top: rem(15);
+    }
+
+    @include media('min', $desktop) {
+      margin-top: 0;
+      gap: rem(15);
+    }
+  }
+
+  &__props-item {
+    display: inline-flex;
+    gap: rem(5);
+    align-items: center;
+    height: rem(30);
+    padding: 1px rem(10) 0;
+    border: 1px solid #EAEBF2;
+    border-radius: rem(5);
+    background: #F6F6F6;
+    font-size: rem(12);
+
+    @include media('min', $tablet) {
+      font-size: rem(14);
+    }
+
+    @include media('min', $desktop) {
+      height: auto;
+      padding: 0;
+      border: 0;
+      background: none;
+
+      &:before {
+        content: '·';
+      }
+    }
   }
 
   &__text {
-    font: rem(14)/1.5 $fontRegular;
+    grid-area: text;
+    margin-top: rem(10);
+    font: rem(12)/1.5 $fontRegular;
     color: $gray;
+
+    @include media('min', $tablet) {
+      margin-top: rem(15);
+      font-size: rem(14);
+    }
+
+    @include media('min', $desktop) {
+      margin-top: 0;
+    }
   }
 
   &__rating {
-    flex: 0 rem(207);
+    grid-area: rating;
+    margin-top: rem(-3);
     display: flex;
-    gap: rem(20);
-    flex-direction: column;
+    gap: rem(10);
+    align-items: center;
     font-size: rem(14);
+    line-height: normal;
+
+    @include media('min', $desktop) {
+      margin: 0;
+      gap: rem(20);
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__rating-count {
+    font-size: 0;
+    display: flex;
+
+    @include media('min', $desktop) {
+      font-size: rem(14);
+      gap: rem(5);
+    }
+
+    b {
+      font-size: rem(14);
+
+      @include media('min', $desktop) {
+        &:before {
+          content: '(';
+        }
+
+        &:after {
+          content: ')';
+        }
+      }
+    }
   }
 
   &__stars {
-    margin-top: rem(-10);
-    height: rem(24);
+    order: -1;
+    height: rem(14);
     width: max-content;
+
+    @include media('min', $desktop) {
+      order: 0;
+      height: rem(24);
+      margin-top: rem(-10);
+    }
   }
 
   &__reviews {
@@ -236,8 +428,110 @@
     color: $gray;
 
     .icon-reviews {
+      display: none;
       width: rem(18);
       height: rem(18);
+
+      @include media('min', $desktop) {
+        display: inline-block;
+      }
+    }
+
+    &:before {
+      content: '·';
+      font-family: $fontBold;
+      color: $gray;
+
+      @include media('min', $desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    left: rem(20);
+    bottom: rem(20);
+    width: calc(100% - rem(20)*2);
+
+    @include media('min', $tablet) {
+      width: auto;
+    }
+
+    @include media('min', $desktop) {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .button {
+      padding: 0 rem(25);
+
+      @include media('min', $desktop) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.company-props {
+  grid-area: props;
+  margin: rem(10) rem(-20) 0;
+  padding: 0 rem(20);
+  overflow-x: auto;
+  @include scrollbar-hidden();
+
+  @include media('min', $tablet) {
+    margin: rem(15) 0;
+    padding: 0;
+  }
+
+  @include media('min', $desktop) {
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(5);
+    width: max-content;
+
+    @include media('min', $tablet) {
+      width: auto;
+      flex-wrap: wrap;
+    }
+
+    @include media('min', $desktop) {
+      gap: rem(15);
+    }
+  }
+
+  &__item {
+    display: inline-flex;
+    gap: rem(5);
+    align-items: center;
+    height: rem(30);
+    padding: 1px rem(5) 0;
+    border: 1px solid #EAEBF2;
+    border-radius: rem(5);
+    background: #F6F6F6;
+    font-size: rem(12);
+    width: max-content;
+
+    @include media('min', $tablet) {
+      padding: 1px rem(10) 0;
+      font-size: rem(14);
+    }
+
+    @include media('min', $desktop) {
+      height: auto;
+      padding: 0;
+      border: 0;
+      background: none;
+
+      &:before {
+        content: '·';
+      }
     }
   }
 }

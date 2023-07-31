@@ -30,10 +30,14 @@
   border: 1px solid #00ADE6;
   border-radius: rem(5);
   background: #00ADE6;
-  font: rem(14)/1.2 $fontBold;
+  font: rem(12)/1.2 $fontBold;
   color: #ffffff;
   text-transform: uppercase;
   cursor: pointer;
+
+  @include media('min', $tablet) {
+    font-size: rem(14);
+  }
 
   &_big {
     height: rem(50);

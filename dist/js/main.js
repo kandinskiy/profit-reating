@@ -150,6 +150,21 @@ Array.from(document.querySelectorAll('.js-rating')).forEach(function (e) {
 Array.from(document.querySelectorAll('.js-number')).forEach(function (e) {
   e.innerText = thousandth(e.textContent);
 });
+Array.from(document.querySelectorAll('.faq__item')).forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    var elem = e.target.closest('.faq__item');
+    var height = elem.querySelector('.faq__answer-inner').offsetHeight;
+
+    if (!elem.classList.contains('is-open')) {
+      elem.querySelector('.faq__answer').style.height = height + 'px';
+    } else {
+      elem.querySelector('.faq__answer').style.height = '0';
+    }
+
+    elem.classList.toggle('is-open');
+  });
+});
 
 /***/ })
 

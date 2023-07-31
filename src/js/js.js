@@ -128,3 +128,17 @@ Array.from(document.querySelectorAll('.js-rating')).forEach((e) => {
 Array.from(document.querySelectorAll('.js-number')).forEach((e) => {
   e.innerText = thousandth(e.textContent);
 });
+
+Array.from(document.querySelectorAll('.faq__item')).forEach((link) => {
+  link.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const elem = e.target.closest('.faq__item');
+    const height = elem.querySelector('.faq__answer-inner').offsetHeight;
+    if (!elem.classList.contains('is-open')) {
+      elem.querySelector('.faq__answer').style.height = height + 'px';
+    } else {
+      elem.querySelector('.faq__answer').style.height = '0';
+    }
+    elem.classList.toggle('is-open');
+  });
+});

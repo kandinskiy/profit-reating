@@ -5,8 +5,11 @@
 @import "main"; // Общие стили
 @import "form"; // Стили формы общие
 @import "popup"; // Всплывающие окна
-@import "header"; // Общие стили
+@import "header"; // Шапка сайта
+@import "footer"; // Подвал сайта
 @import "about-rating"; // Информация о рейтинге
 @import "top-companies"; // Топ компаний
 @import "companies-rating"; // Рейтинг компаний
-@import "actions"; // Акции и скидки
+@import "stages"; // Этапы работы
+@import "faq"; // FAQ
+@import "address-selection"; // Выбор сервисного центра

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="favicon.ico">
+  <title>Верстка PROFIT</title>
+  <link href="css/normalize.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!--Шапка сайта-->
+  <header id="header" class="header">
+    <div class="header__inner">
+
+      <!--Шапка логотип-->
+      <div class="header-logo">
+        <div class="header-logo__img"><a href="/" title=""><img src="/images/logo.png" alt=""></a></div>
+        <div class="header-logo__text">Развитие отделов продаж по всей<br>России с гарантией роста выручки</div>
+        <div class="header-logo__date">Работаем с 2016 года</div>
+      </div>
+
+      <!--Шапка выбор места-->
+      <div id="header-choice" class="header-choice">
+        <a href="" class="header-choice__block">
+          <img src="/images/icon-city.png" alt="" class="header-choice__icon">
+          <div class="header-choice__name">Ваш город:</div>
+          <div class="header-choice__link">
+            <span class="header-choice__city">Москва</span>
+            <img src="/images/header-arrow.svg" alt="">
+          </div>
+        </a>
+        <a href="" class="header-choice__block">
+          <img src="/images/icon-city.png" alt="" class="header-choice__icon">
+          <div class="header-choice__name">Район:</div>
+          <div class="header-choice__link">
+            <span class="header-choice__district">Беговой</span>
+            <img src="/images/header-arrow.svg" alt="">
+          </div>
+        </a>
+        <a href="" class="header-choice__block">
+          <img src="/images/icon-metro.png" alt="" class="header-choice__icon">
+          <div class="header-choice__name">Метро:</div>
+          <div class="header-choice__link">
+            <span class="header-choice__metro">Prospekt Mira</span>
+            <img src="/images/header-arrow.svg" alt="">
+          </div>
+        </a>
+        <a href="" class="header-choice__block">
+          <img src="/images/icon-metro.png" alt="" class="header-choice__icon">
+          <div class="header-choice__name">Рейтинг организаций по:</div>
+          <div class="header-choice__link">
+            <span class="header-choice__type">Ремонт стиральных машин</span>
+            <img src="/images/header-arrow.svg" alt="">
+          </div>
+        </a>
+        <a href="" title="Заказать звонок" class="nav-appointment js-phone-popup" data-name="Заказать звонок">
+          <span>Заказать звонок</span>
+        </a>
+        <div class="header-choice__messengers messengers">
+          <a href="whatsapp://send?phone=79264496896" title="Написать в WhatsApp" class="messengers__link">
+            <img src="/images/icon-whatsapp-gray.svg" class="messengers__icon">
+            <div class="messengers__name">WhatsApp</div>
+          </a>
+          <a href="tg://resolve?domain=kan_nik" title="Написать в Telegram" class="messengers__link">
+            <img src="/images/icon-telegram-gray.svg" class="messengers__icon">
+            <div class="messengers__name">Telegram</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Шапка - контакты -->
+      <div class="header-contacts">
+        <div class="header-contacts__numbers">
+          <div class="header-contacts__messengers">
+            <div class="messengers">
+              <a href="whatsapp://send?phone=79264496896" title="Написать в WhatsApp" class="messengers__link">
+                <img src="/images/icon-whatsapp-gray.svg" class="messengers__icon">
+                <div class="messengers__name">WhatsApp</div>
+              </a>
+              <a href="tg://resolve?domain=kan_nik" title="Написать в Telegram" class="messengers__link">
+                <img src="/images/icon-telegram-gray.svg" class="messengers__icon">
+                <div class="messengers__name">Telegram</div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <a href="tel:+79238884587" title="Позвонить" class="header-contacts__phone">+7 923 888-45-87</a>
+          </div>
+          <div>
+            <a href="" title="Перезвонить" class="header-contacts__callback js-phone-popup" data-name="Перезвонить мне">Перезвоните мне</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="" title="Заказать звонок" class="header-appointment js-phone-popup" data-name="Заказать звонок">
+        <span>Заказать звонок</span>
+      </a>
+
+      <div id="js-open-menu" class="header-link-menu">
+        <span class="header-link-menu__icon"></span>
+      </div>
+
+    </div>
+  </header>
+
+  <!--Верхнее основное меню-->
+  <div class="header-nav__wrap">
+    <nav id="nav" class="header-nav">
+      <ul class="header-nav__list">
+
+        <li class="header-nav__item">
+          <a href="" title="Услуги" class="header-nav__link">
+            Услуги
+            <div class="header-nav__icon">
+              <svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.16064 6.125L5.16064 9.125L8.16064 6.125" stroke-linecap="round" stroke-linejoin="round" class="header-nav__arrow" />
+              </svg>
+            </div>
+          </a>
+          <ul class="drop-down-first">
+            <li class="drop-down-first__item drop-menu">
+              <a href="" title="Ремонт техники Apple" class="drop-down-first__link">
+                Ремонт техники Apple
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 13L7 7L1 1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+
+              <ul class="drop-down-second">
+                <li class="drop-down-second__item">
+                  <a href="" title="Подраздел 2-го уровня" class="drop-down-second__link">Подраздел 2-го уровня</a>
+                </li>
+                <li class="drop-down-second__item">
+                  <a href="" title="Еще какой-то подраздел" class="drop-down-second__link">Еще какой-то подраздел</a>
+                </li>
+                <li class="drop-down-second__item">
+                  <a href="" title="Еще какой-то подраздел" class="drop-down-second__link">Еще какой-то подраздел</a>
+                </li>
+                <li class="drop-down-second__item">
+                  <a href="" title="Еще какой-то подраздел" class="drop-down-second__link">Еще какой-то подраздел</a>
+                </li>
+              </ul>
+
+            </li>
+            <li class="drop-down-first__item">
+              <a href="" title="Ремонт камер sony" class="drop-down-first__link">
+                Ремонт камер sony
+              </a>
+            </li>
+            <li class="drop-down-first__item">
+              <a href="" title="Еще какая-то категория" class="drop-down-first__link">
+                Еще какая-то категория
+              </a>
+            </li>
+            <li class="drop-down-first__item">
+              <a href="" title="Еще какая-то категория" class="drop-down-first__link">Еще какая-то категория</a>
+            </li>
+            <li class="drop-down-first__item">
+              <a href="" title="Еще какая-то категория" class="drop-down-first__link">Еще какая-то категория</a>
+            </li>
+          </ul>
+
+        </li>
+
+        <li class="header-nav__item">
+          <a href="price.html" title="Прайс" class="header-nav__link">Прайс</a>
+        </li>
+
+        <li class="header-nav__item">
+          <a href="faq.html" title="Вопросы и ответы" class="header-nav__link">FAQ</a>
+        </li>
+
+        <li class="header-nav__item">
+          <a href="" title="Портфолио" class="header-nav__link">Портфолио</a>
+        </li>
+
+        <li class="header-nav__item">
+          <a href="" title="Отзывы" class="header-nav__link">Отзывы <span class="header-nav__new">+3</span></a>
+        </li>
+
+        <li class="header-nav__item">
+          <a href="" title="О компании" class="header-nav__link">О компании</a>
+        </li>
+
+        <li class="header-nav__item">
+          <a href="" title="Контроль качества" class="header-nav__link">Контроль качества</a>
+        </li>
+
+        <li class="header-nav__item">
+          <a href="" title="Контакты" class="header-nav__link">Контакты</a>
+        </li>
+      </ul>
+
+      <a href="" title="Записаться на прием" class="nav-appointment js-phone-popup" data-name="Записаться на прием">Записаться на&nbsp;прием</a>
+
+    </nav>
+  </div>
+
+  <!--Хлебные крошки-->
+  <div class="breadcrumb">
+    <ul class="breadcrumb__list">
+      <li class="breadcrumb__item">
+        <a href="/" title="На главную" class="breadcrumb__link">Главная</a>
+      </li>
+      <li class="breadcrumb__item">
+        Вопросы и ответы
+      </li>
+    </ul>
+  </div>
+
+  <!--Основной контент страницы-->
+  <section class="section">
+    <div class="section__inner">
+
+      <!--FAQ-->
+      <div class="section__block faq">
+
+        <h1><b>Ответы</b> на часто задаваемые вопросы наших клиентов</h1>
+
+        <div class="faq__content">
+          <div class="faq__list">
+
+            <div class="faq__column-page">
+
+              <div class="faq__item">
+                <div class="faq__question">
+                  Каков процесс создания заявки на сайте?
+                  <span class="faq__icon"><span class="icon-corner"></span></span>
+                </div>
+                <div class="faq__answer">
+                  <div class="faq__answer-inner">Классический «Lorem ipsum dolor sit amet…» проход отнести к ремиксов римского философа Цицерона 45 г. до н.э. текст De Finibus Bonorum et Malorum («О крайностями добра и зла»). Более конкретно, проход, как полагают, происходит из секций 1.10.32 - 33 из его текста</div>
+                </div>
+              </div>
+
+              <div class="faq__item">
+                <div class="faq__question">
+                  Каковы критерии выбора сервисного центра?
+                  <span class="faq__icon"><span class="icon-corner"></span></span>
+                </div>
+                <div class="faq__answer">
+                  <div class="faq__answer-inner">Классический «Lorem ipsum dolor sit amet…» проход отнести к ремиксов римского философа Цицерона 45 г. до н.э. текст De Finibus Bonorum et Malorum («О крайностями добра и зла»). Более конкретно, проход, как полагают, происходит из секций 1.10.32 - 33 из его текста</div>
+                </div>
+              </div>
+
+              <div class="faq__item">
+                <div class="faq__question">
+                  Каковы сроки реагирования на мою заявку?
+                  <span class="faq__icon"><span class="icon-corner"></span></span>
+                </div>
+                <div class="faq__answer">
+                  <div class="faq__answer-inner">Классический «Lorem ipsum dolor sit amet…» проход отнести к ремиксов римского философа Цицерона 45 г. до н.э. текст De Finibus Bonorum et Malorum («О крайностями добра и зла»). Более конкретно, проход, как полагают, происходит из секций 1.10.32 - 33 из его текста</div>
+                </div>
+              </div>
+
+              <div class="faq__item">
+                <div class="faq__question">
+                  Есть ли возможность оплаты ремонта через сайт?
+                  <span class="faq__icon"><span class="icon-corner"></span></span>
+                </div>
+                <div class="faq__answer">
+                  <div class="faq__answer-inner">Классический «Lorem ipsum dolor sit amet…» проход отнести к ремиксов римского философа Цицерона 45 г. до н.э. текст De Finibus Bonorum et Malorum («О крайностями добра и зла»). Более конкретно, проход, как полагают, происходит из секций 1.10.32 - 33 из его текста</div>
+                </div>
+              </div>
+
+              <div class="faq__item">
+                <div class="faq__question">
+                  Каков процесс создания заявки на сайте?
+                  <span class="faq__icon"><span class="icon-corner"></span></span>
+                </div>
+                <div class="faq__answer">
+                  <div class="faq__answer-inner">Классический «Lorem ipsum dolor sit amet…» проход отнести к ремиксов римского философа Цицерона 45 г. до н.э. текст De Finibus Bonorum et Malorum («О крайностями добра и зла»). Более конкретно, проход, как полагают, происходит из секций 1.10.32 - 33 из его текста</div>
+                </div>
+              </div>
+
+              <div class="faq__item">
+                <div class="faq__question">
+                  Каковы критерии выбора сервисного центра?
+                  <span class="faq__icon"><span class="icon-corner"></span></span>
+                </div>
+                <div class="faq__answer">
+                  <div class="faq__answer-inner">Классический «Lorem ipsum dolor sit amet…» проход отнести к ремиксов римского философа Цицерона 45 г. до н.э. текст De Finibus Bonorum et Malorum («О крайностями добра и зла»). Более конкретно, проход, как полагают, происходит из секций 1.10.32 - 33 из его текста</div>
+                </div>
+              </div>
+
+              <div class="faq__item">
+                <div class="faq__question">
+                  Каковы сроки реагирования на мою заявку?
+                  <span class="faq__icon"><span class="icon-corner"></span></span>
+                </div>
+                <div class="faq__answer">
+                  <div class="faq__answer-inner">Классический «Lorem ipsum dolor sit amet…» проход отнести к ремиксов римского философа Цицерона 45 г. до н.э. текст De Finibus Bonorum et Malorum («О крайностями добра и зла»). Более конкретно, проход, как полагают, происходит из секций 1.10.32 - 33 из его текста</div>
+                </div>
+              </div>
+
+              <div class="faq__item">
+                <div class="faq__question">
+                  Есть ли возможность оплаты ремонта через сайт?
+                  <span class="faq__icon"><span class="icon-corner"></span></span>
+                </div>
+                <div class="faq__answer">
+                  <div class="faq__answer-inner">Классический «Lorem ipsum dolor sit amet…» проход отнести к ремиксов римского философа Цицерона 45 г. до н.э. текст De Finibus Bonorum et Malorum («О крайностями добра и зла»). Более конкретно, проход, как полагают, происходит из секций 1.10.32 - 33 из его текста</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!--Подвал сайта-->
+  <footer class="footer">
+    <div class="footer__wrap">
+
+      <div class="footer__company">
+
+        <div class="footer__about">
+          <div class="footer__logo">
+            <img src="/images/logo-footer.png" alt="">
+          </div>
+          <div class="footer__slogan">
+            Быстрый и качественный ремонт фотокамер
+          </div>
+        </div>
+
+        <div class="footer__information">
+          <div class="footer__limit">
+            Информация, опубликованная на данном сайте, предназначена для любой аудитории, если иное
+          </div>
+          <div class="footer__data">
+            <span>· ИНН 665577889</span>
+            <span>· ОГРН 665577889546</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__menu footer-menu">
+        <div class="footer-menu__block">
+          <div class="footer-menu__name">Меню</div>
+          <ul class="footer-menu__list footer-menu__list_columns">
+            <li class="footer-menu__item">
+              <a href="" title="Главная" class="footer-menu__link">Главная</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Наша команда" class="footer-menu__link">Наша команда</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Отзывы" class="footer-menu__link">Отзывы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Контакты" class="footer-menu__link">Контакты</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Контакты" class="footer-menu__link">Контакты</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Еще страница 2" class="footer-menu__link">Еще страница 2</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Еще страница" class="footer-menu__link">Еще страница</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Еще страница3" class="footer-menu__link">Еще страница3</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-menu__block">
+          <div class="footer-menu__name">Услуги</div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+              <a href="" title="Категория номер 1" class="footer-menu__link">Категория номер 1</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Услуга номер 1" class="footer-menu__link">Услуга номер 1</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Категория номер 2" class="footer-menu__link">Категория номер 2</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Услуга номер 2" class="footer-menu__link">Услуга номер 2</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-menu__block">
+          <div class="footer-menu__name">Район</div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+              <a href="" title="Категория номер 1" class="footer-menu__link">Категория номер 1</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Услуга номер 1" class="footer-menu__link">Услуга номер 1</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Категория номер 2" class="footer-menu__link">Категория номер 2</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Услуга номер 2" class="footer-menu__link">Услуга номер 2</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-menu__block">
+          <div class="footer-menu__name">Метро</div>
+          <ul class="footer-menu__list">
+            <li class="footer-menu__item">
+              <a href="" title="Категория номер 1" class="footer-menu__link">Категория номер 1</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Услуга номер 1" class="footer-menu__link">Услуга номер 1</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Категория номер 2" class="footer-menu__link">Категория номер 2</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="" title="Услуга номер 2" class="footer-menu__link">Услуга номер 2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__license">
+          АО «АльфаБанк» - лицензия СИ № 2239 от 13.11.2017 г.
+        </div>
+        <div class="footer__documents">
+          Вся информация является публичной офертой<br>
+          <a href="" title="">Политика персональных данных</a>
+        </div>
+        <div class="footer__copyright">
+          &copy; 2014 - 2023, LOGO COMPANY<br>
+          <b>Сделано с <img src="/images/icon-heart.png" alt=""> <a href="" title="Profit Agency">Profit Agency</a></b>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<div id="popup" class="popup popup_hide">
+  <div class="popup__block">
+    <div class="popup__body"><!-- Место для блока попап --></div>
+    <div class="popup__close js-close-popup">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.75 1.85637L12.1436 0.25L7 5.39363L1.85637 0.25L0.25 1.85637L5.39363 7L0.25 12.1436L1.85637 13.75L7 8.60637L12.1436 13.75L13.75 12.1436L8.60637 7L13.75 1.85637Z" fill="#"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!--Короткий popup для отправки номера телефона -->
+<div id="phone-popup" class="popup-source">
+  <div class="popup-request">
+    <div class="popup-request__name"></div>
+    <div class="popup-request__text">
+      Оставьте заявку и мы свяжемся с&nbsp;вами в течение 5-10 минут
+    </div>
+    <form class="popup-request__form">
+      <input type="hidden" name="form-target" value="" title="">
+      <input type="tel" name="telephone" placeholder="+7 (___) ___-__-__" title="" class="input popup-request__input">
+      <button type="submit" class="button popup-request__button">
+        <span class="button__text">Отправить</span>
+      </button>
+      <div class="popup-request__rules rules-form">
+        <div class="rules-form__checkbox checkbox">
+          <label class="checkbox__label">
+            <input type="checkbox" title="" class="checkbox__input">
+            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.31055 4.81836L3.51168 6.78098C3.99065 7.23632 4.75123 7.20573 5.19212 6.71337L9.86523 1.03906" stroke-width="1.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </label>
+        </div>
+        <div class="rules-form__text">
+          Нажимая кнопку вы соглашаетесь с условиями <a href="" target="_blank" title="Политики конфиденциальности" class="rules-form__link">Политики конфиденциальности</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="popup-success" class="popup-source">
+  <div class="popup-request">
+    <div class="popup-request__name">
+      Спасибо за оставленную заявку!
+    </div>
+    <div class="popup-request__text">
+      В течении 5-10 минут мы с&nbsp;вами&nbsp;свяжемся
+    </div>
+    <div class="popup-request__success">
+      <div class="popup-request__success-text">
+        Если ваш вопрос срочный Вы можете позвонить по номеру
+      </div>
+      <a href="tel:+79238884587" class="popup-request__success-phone">
+        +7 923 888-45-87
+      </a>
+      <div>
+        или написать нам в:
+      </div>
+      <div class="popup-request__success-messengers">
+        <a href="whatsapp://send?phone=79264496896" class="popup-request__success-messenger">
+          <div class="popup-request__success-icon">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1925 2.34489C9.9646 1.11554 8.33158 0.438221 6.59186 0.4375C3.007 0.4375 0.0894432 3.35498 0.0880012 6.9408C0.0875206 8.08707 0.386967 9.20603 0.956139 10.1923L0.0334473 13.5625L3.48124 12.6581C4.43125 13.1763 5.50078 13.4494 6.58922 13.4497H6.59194C10.1764 13.4497 13.0943 10.532 13.0956 6.94601C13.0964 5.20813 12.4205 3.57415 11.1925 2.34489ZM6.59186 12.3513H6.58962C5.61966 12.3509 4.66837 12.0903 3.83829 11.5978L3.64098 11.4806L1.59501 12.0174L2.14111 10.0226L2.01253 9.81806C1.4714 8.95737 1.18565 7.96258 1.18613 6.9412C1.18725 3.96076 3.6123 1.53595 6.59402 1.53595C8.0379 1.53643 9.39518 2.09943 10.4158 3.12122C11.4364 4.14301 11.9981 5.50117 11.9976 6.94561C11.9963 9.92629 9.57142 12.3513 6.59186 12.3513ZM9.557 8.30273C9.39454 8.22134 8.59554 7.82832 8.44654 7.77401C8.2977 7.71978 8.18923 7.69278 8.081 7.8554C7.97261 8.01802 7.66123 8.38412 7.56638 8.4925C7.47153 8.60097 7.37685 8.61459 7.21431 8.5332C7.05177 8.45189 6.52818 8.28022 5.90741 7.72658C5.42436 7.29568 5.09824 6.76352 5.00339 6.6009C4.9087 6.43812 5.00259 6.35865 5.07468 6.26925C5.2506 6.05079 5.42676 5.82176 5.48092 5.71337C5.53515 5.60491 5.50799 5.50998 5.4673 5.42867C5.42676 5.34736 5.10176 4.54747 4.96638 4.22199C4.83436 3.90524 4.7005 3.94802 4.60068 3.94305C4.50599 3.93833 4.39761 3.93737 4.28922 3.93737C4.18091 3.93737 4.00483 3.97798 3.85583 4.14076C3.70691 4.30346 3.28714 4.69656 3.28714 5.49644C3.28714 6.29633 3.86945 7.06905 3.95068 7.17752C4.03191 7.28599 5.09663 8.92741 6.72676 9.63125C7.11449 9.79883 7.41714 9.89873 7.65322 9.97363C8.04255 10.0973 8.39671 10.0799 8.67677 10.038C8.98903 9.99134 9.63815 9.64487 9.7737 9.26531C9.90908 8.88568 9.90908 8.56036 9.86839 8.4925C9.82785 8.42473 9.71946 8.38412 9.557 8.30273Z"/>
+            </svg>
+          </div>
+          WhatsApp
+        </a>
+        <a href="tg://resolve?domain=kan_nik" class="popup-request__success-messenger">
+          <div class="popup-request__success-icon">
+            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.967228 5.22249C4.32273 3.76031 6.55972 2.79803 7.67822 2.32938C10.8775 0.998433 11.5399 0.767235 11.971 0.760986C12.0647 0.760986 12.2772 0.785981 12.4147 0.892207C12.5271 0.985936 12.5646 1.11716 12.5771 1.20464C12.5896 1.29212 12.6084 1.49832 12.5959 1.65454C12.4209 3.47288 11.6711 7.89064 11.2899 9.92768C11.1274 10.79 10.8088 11.0774 10.5026 11.1087C9.83399 11.1711 9.32785 10.665 8.678 10.2401C7.66573 9.57776 7.09085 9.16535 6.10982 8.5155C4.97258 7.76566 5.70991 7.35326 6.35977 6.68466C6.52848 6.5097 9.47157 3.82905 9.52781 3.58535C9.53406 3.55411 9.5403 3.44163 9.47157 3.37915C9.40284 3.31666 9.30911 3.34166 9.23412 3.35415C9.13415 3.37915 7.51576 4.44766 4.37896 6.55968C3.92281 6.87211 3.50416 7.02833 3.12924 7.02208C2.71684 7.01583 1.92951 6.79088 1.34214 6.59718C0.623555 6.36598 0.0486842 6.24101 0.0986729 5.8411C0.123667 5.63489 0.411103 5.42244 0.954731 5.20374L0.967228 5.22249Z"/>
+            </svg>
+          </div>
+          Telegram
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/js-select.js"></script>
+
+</body>
+</html>

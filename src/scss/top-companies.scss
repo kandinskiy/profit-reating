@@ -20,31 +20,36 @@
 
   &__wrapper {
     margin: 0 rem(-20);
+    padding: 0 rem(20);
     overflow: hidden;
     overflow-x: auto;
 
     @include media('min', $tablet) {
       margin: 0 rem(-40);
+      padding: 0 rem(40);
     }
 
     @include media('min', $desktop) {
       overflow: visible;
+      margin: 0;
+      padding: 0;
     }
   }
 
   &__list {
-    margin-top: rem(40);
-    padding: 0 rem(20) rem(32);
+    padding: rem(20) 0 rem(20);
+    width: max-content;
     display: grid;
     gap: rem(10);
     grid-template-columns: repeat(3, rem(276));
 
     @include media('min', $tablet) {
-      padding: 0 rem(40) rem(32);
+      padding-top: rem(30);
       grid-template-columns: repeat(3, rem(305));
     }
 
     @include media('min', $desktop) {
+      width: auto;
       padding: 0;
       gap: rem(20);
       grid-template-columns: repeat(3, 1fr);
@@ -53,75 +58,112 @@
 
   &__item {
     flex: 0 1 rem(467);
-    box-shadow: 0 rem(7) rem(40) 0 rgba(51, 65, 72, 0.1);
+    box-shadow: 7px 1px 40px 0 rgba(12, 5, 61, 0.07);
   }
 }
 
 .top-company {
+  overflow: hidden;
   position: relative;
-  padding: rem(20);
+  width: rem(276);
+  padding: 0 rem(20) rem(20);
+  border: 1px solid #EAEBF2;
   border-radius: rem(10);
   background: #ffffff;
   display: flex;
   gap: rem(15);
   flex-direction: column;
 
+  @include media('min', $tablet) {
+    padding: rem(20);
+    width: rem(305);
+  }
+
   @include media('min', $desktop) {
     padding: rem(30);
+    width: auto;
   }
 
   &:after {
     content: '';
     display: block;
     position: absolute;
-    top: rem(-10);
-    right: rem(-10);
-    width: rem(38);
-    height: rem(38);
+    top: 0;
+    right: rem(5);
+    width: rem(50);
+    height: rem(50);
+
+    @include media('min', $tablet) {
+      right: rem(20);
+      width: rem(60);
+      height: rem(60);
+    }
+
+    @include media('min', $desktop) {
+      right: rem(12);
+    }
   }
 
   &:nth-child(1):after {
-    background: url("/images/icon-place-1.png") no-repeat {
+    background: url("/images/icon-medal-1.png") no-repeat {
       size: contain;
     };
   }
 
   &:nth-child(2):after {
-    background: url("/images/icon-place-2.png") no-repeat {
+    background: url("/images/icon-medal-2.png") no-repeat {
       size: contain;
     };
   }
 
   &:nth-child(3):after {
-    background: url("/images/icon-place-3.png") no-repeat {
+    background: url("/images/icon-medal-3.png") no-repeat {
       size: contain;
     };
   }
 
   &__header {
+    order: -1;
     display: flex;
     gap: rem(20);
     flex-direction: column;
 
     @include media('min', $desktop) {
+      order: 0;
       flex-direction: row;
       align-items: center;
     }
   }
 
   &__photo {
-    flex: 0 rem(125);
     height: auto;
+    margin: 0 rem(-20);
+
+    @include media('min', $tablet) {
+      margin: 0;
+    }
+
+    @include media('min', $desktop) {
+      flex: 0 rem(125);
+    }
 
     img {
       @include img-100;
-      border-radius: rem(5);
+      border-radius: rem(5) rem(5) 0 0;
+
+      @include media('min', $tablet) {
+        border-radius: rem(5);
+      }
     }
   }
 
   &__name {
     flex: 1;
-    font: rem(16)/1.4 $fontBold;
+    font: rem(14)/1.4 $fontBold;
+
+    @include media('min', $tablet) {
+      font-size: rem(16);
+    }
   }
 
   &__rating {
@@ -130,8 +172,13 @@
     display: flex;
     align-items: center;
     gap: rem(6);
-    font: rem(14)/1 $fontRegular;
+    font: rem(13)/1.3 $fontRegular;
     color: $gray;
+
+    b {
+      font-size: 14;
+      color: $black;
+    }
   }
 
   &__stars {
@@ -159,7 +206,11 @@
 
   &__count {
     flex: 1;
-    font-size: rem(14);
+    font-size: rem(12);
+
+    @include media('min', $tablet) {
+      font-size: rem(14);
+    }
 
     b {
       font-family: $fontSemibold;

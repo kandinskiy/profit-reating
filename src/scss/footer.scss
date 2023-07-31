@@ -1,0 +1,262 @@
+.footer {
+  margin-top: rem(70);
+  padding: rem(20) 0 0;
+  border-top: 1px solid #EAEBF2;
+  background: #F6F7F8;
+  font-size: rem(12);
+
+  @include media('min', $tablet) {
+    padding: rem(40) 0 0;
+    font-size: rem(14);
+  }
+
+  @include media('min', $desktop) {
+    margin-top: rem(100);
+    padding: rem(30) 0 0;
+  }
+
+  &__wrap {
+    @extend .inner;
+    display: flex;
+    gap: rem(5);
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include media('min', $tablet) {
+      gap: rem(30);
+    }
+
+    @include media('min', $desktop) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  &__company {
+    position: relative;
+    flex: 0 1 rem(148);
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+
+    @include media('min', $tablet) {
+      align-items: center;
+      flex-direction: row;
+    }
+
+    @include media('min', $desktop) {
+      flex-direction: column;
+      flex: 0 1 rem(380);
+    }
+  }
+
+  &__about {
+    flex-direction: row;
+    display: flex;
+    gap: rem(10);
+
+    @include media('min', $tablet) {
+      flex: 0 1 rem(188);
+      flex-direction: column;
+      padding-right: rem(20);
+      border-right: 1px solid #E0E0E3;
+    }
+
+    @include media('min', $desktop) {
+      flex: 1;
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+      border: none;
+    }
+  }
+
+  &__logo {
+    @include media('min', $desktop) {
+      flex: 0 1 rem(147);
+    }
+
+    img {
+      @include img-100;
+    }
+  }
+
+  &__slogan {
+    font-size: rem(12);
+    color: $gray;
+
+    @include media('min', $desktop) {
+      flex: 0 1 rem(150);
+    }
+  }
+
+  &__information {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: rem(15);
+  }
+
+  &__limit {
+    color: $gray;
+  }
+
+  &__data {
+    display: flex;
+    gap: rem(15);
+    color: $gray;
+  }
+
+  &__menu {
+    flex: 0 1 max-content;
+    padding-top: rem(30);
+
+    @include media('min', $desktop) {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__bottom {
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: rem(15);
+    order: 2;
+    padding: rem(20) 0;
+    border-top: 1px solid #E0E0E3;
+    font-size: rem(12);
+    line-height: 1.6;
+    color: $gray;
+
+    @include media('min', $desktop) {
+      padding: rem(30) 0;
+    }
+
+    @include media('min', $desktop) {
+      padding: rem(21.5) 0;
+      margin-top: rem(40);
+    }
+  }
+
+  &__license {
+    flex: 0 1 100%;
+    order: 2;
+
+    @include media('min', $desktop) {
+      flex: 0 1 rem(340);
+      order: 0;
+    }
+  }
+
+  &__documents {
+    flex: 0 1 max-content;
+
+    @include media('min', $desktop) {
+      text-align: center;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      @include media('min', $desktop) {
+        text-decoration: none;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__copyright {
+    flex: 0 1 max-content;
+    order: 2;
+
+    @include media('min', $tablet) {
+      order: 0;
+      text-align: right;
+    }
+
+    img {
+      display: inline-block;
+      width: rem(16);
+      height: auto;
+      vertical-align: middle;
+    }
+
+    b {
+      display: block;
+      margin-top: rem(10);
+
+      @include media('min', $tablet) {
+        display: inline;
+        margin: 0;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+
+      @include media('min', $desktop) {
+        text-decoration: none;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footer-menu {
+  display: none;
+  gap: rem(20);
+  border-top: 1px solid #E0E0E3;
+
+  @include media('min', $desktop) {
+    display: flex;
+    gap: rem(60);
+    border: none;
+  }
+
+  &__block {
+    position: relative;
+  }
+
+  &__name {
+    font-family: $fontBold;
+  }
+
+  &__list {
+    list-style: none;
+
+    &_columns {
+      display: columns;
+      column-count: 2;
+      column-gap: rem(50);
+      column-fill: balance;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-top: rem(15);
+    width: rem(150);
+
+    @include media('min', $desktop) {
+      max-width: rem(150);
+    }
+  }
+
+  &__link {
+    color: $gray;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

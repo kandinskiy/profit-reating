@@ -54,7 +54,7 @@ h1, .h1 {
 h2, .h2 {
   font-family: $fontRegular;
   font-weight: normal;
-  @include adaptive(font-size, rem(18), $tablet rem(28), $desktop rem(32));
+  @include adaptive(font-size, rem(18), $tablet rem(24), $desktop rem(32));
 }
 
 a {
@@ -70,6 +70,12 @@ b {
   width: 100%;
   height: auto;
   vertical-align: baseline;
+}
+
+.desktop-only {
+  @include media('max', $desktop) {
+    display: none;
+  }
 }
 
 .wrapper {
@@ -112,6 +118,11 @@ b {
     gap: rem(4);
     text-decoration: none;
     color: $gray;
+    transition: opacity .3s linear;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 
   &__icon {
@@ -155,20 +166,29 @@ b {
 
 .company-labels {
   display: inline-flex;
-  gap: rem(10);
+  gap: rem(5);
+
+  @include media('min', $tablet) {
+    gap: rem(10);
+  }
 
   &__item {
-    height: rem(22);
-    padding: 1px rem(5) 0;
+    height: rem(20);
+    padding: 0 rem(5);
     border: 1px solid;
     border-radius: rem(3);
     background: #ffffff;
     display: flex;
-    gap: rem(5);
+    gap: rem(2);
     align-items: center;
     white-space: nowrap;
     font: rem(10)/1 $fontBold;
     text-transform: uppercase;
+
+    @include media('min', $tablet) {
+      height: rem(22);
+      gap: rem(5);
+    }
 
     @include media('min', $desktop) {
       height: rem(22);
@@ -213,10 +233,14 @@ b {
 
 .company-estimations {
   display: flex;
-  gap: rem(8);
+  gap: rem(5);
   flex-wrap: wrap;
   font-size: inherit;
   align-items: stretch;
+
+  @include media('min', $desktop) {
+    gap: rem(8);
+  }
 
   &__item {
     display: flex;

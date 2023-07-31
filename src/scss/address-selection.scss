@@ -1,0 +1,142 @@
+.addr-sel {
+  position: relative;
+  margin-top: rem(70);
+
+  @include media('min', $desktop) {
+    margin-top: rem(100);
+  }
+
+  &__inner {
+    @extend .inner;
+  }
+
+  &__panel {
+    margin-top: rem(40);
+  }
+
+  &__block {
+    margin-top: rem(20);
+  }
+}
+
+.addr-sel-panel {
+  padding: rem(4);
+  border: 1px solid #EAEBF2;
+  border-radius: rem(5);
+  background: #F6F6F6;
+  display: flex;
+
+  @include media('min', $tablet) {
+    display: inline-flex;
+  }
+
+  &__link {
+    flex: 0 1 50%;
+    height: rem(32);
+    padding: 0 rem(12);
+    display: flex;
+    border-radius: rem(5);
+    gap: rem(8);
+    align-items: center;
+    justify-content: center;
+    font: rem(12)/normal $fontMedium;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s linear;
+
+    @include media('min', $tablet) {
+      height: rem(40);
+      flex: 0 1 auto;
+      font-size: rem(14);
+    }
+
+    &:hover {
+      background: #dddddd;
+    }
+
+    &.is-active {
+      background: #ffffff;
+      color: #00A0FB;
+      font-family: $fontBold;
+    }
+
+    .icon {
+      width: rem(20);
+      height: rem(20);
+      background: $gray;
+      transition: background-color .3s linear;
+
+      @include media('min', $tablet) {
+        width: rem(24);
+        height: rem(24);
+      }
+    }
+
+    &.is-active .icon {
+      background: #00A0FB;
+    }
+  }
+}
+
+.addr-sel-block {
+  position: relative;
+  margin-top: rem(20);
+  padding: rem(20) rem(10) rem(20) rem(20);
+  border: 1px solid #EAEBF2;
+  border-radius: rem(10);
+  background: #F6F6F6;
+
+  @include media('min', $desktop) {
+    padding: rem(40) rem(20) rem(40) rem(40);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(20);
+    max-height: rem(484);
+    overflow-y: auto;
+    @include scrollbar-design-thin();
+
+    @include media('min', $desktop) {
+      grid-template-columns: max-content 1fr;
+      gap: rem(30) rem(40);
+      max-height: rem(484);
+    }
+  }
+
+  &__letter {
+    font: rem(16)/normal $fontBold;
+    color: #00A0FB;
+  }
+
+  &__links {
+    display: grid;
+    gap: rem(10);
+    grid-template-columns: 1fr;
+
+    @include media('min', $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media('min', $desktop) {
+      gap: rem(10) rem(40);
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__link {
+    display: flex;
+    font-size: rem(12);
+    transition: color .3s linear;
+
+    @include media('min', $tablet) {
+      font-size: rem(14);
+    }
+
+    &:hover {
+      color: #00A0FB;
+      text-decoration: none;
+    }
+  }
+}

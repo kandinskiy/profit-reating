@@ -12,12 +12,17 @@
     gap: rem(20);
     grid-template:
         "text" auto
-        "blocks" auto
         "contacts" auto
+        "blocks" auto
       / auto ;
 
     @include media('min', $tablet) {
       gap: rem(40);
+      grid-template:
+          "text" auto
+          "blocks" auto
+          "contacts" auto
+      / auto ;
     }
 
     @include media('min', $desktop) {
@@ -46,7 +51,7 @@
     }
 
     p {
-      margin-top: rem(20);
+      margin-top: rem(15);
       font-size: rem(12);
       color: $gray;
 
@@ -55,12 +60,17 @@
       }
 
       @include media('min', $desktop) {
+        margin-top: rem(20);
         font-size: rem(16);
       }
     }
 
     p + p {
-      margin-top: rem(30);
+      margin-top: rem(15);
+
+      @include media('min', $desktop) {
+        margin-top: rem(30);
+      }
     }
   }
 
@@ -82,22 +92,26 @@
 }
 
 .about-rating-contacts {
-  padding: rem(40);
+  padding: rem(20);
   display: flex;
   gap: rem(20);
   flex-direction: column;
   border-radius: rem(10);
-  background: #F6F7F8 url("/images/bg-reating-contacts.png") top right no-repeat {
-    size: rem(244) auto;
-  };
+  background: #F6F7F8;
   font: rem(14)/1.5 $fontRegular;
 
-  &__icon {
-    width: rem(44);
+  @include media('min', $tablet) {
+    padding: rem(30);
+    background: #F6F7F8 url("/images/about-rating__tablet.png") top right no-repeat {
+      size: auto 100%;
+    };
+  }
 
-    img {
-      @include img-100;
-    }
+  @include media('min', $desktop) {
+    padding: rem(40);
+    background: #F6F7F8 url("/images/about-rating__desktop.png") top rem(20) right no-repeat {
+      size: rem(201) auto;
+    };
   }
 
   &__text {
@@ -121,13 +135,21 @@
     color: $gray;
 
     a {
+      display: block;
+      margin-bottom: rem(3);
       font: rem(16)/1.2 $fontBold;
       color: $black;
       text-decoration: none;
 
+      @include media('min', $tablet) {
+        display: inline;
+        margin: 0;
+      }
+
       @include media('min', $desktop) {
-        font-size: rem(22);
         display: block;
+        margin-bottom: rem(5);
+        font-size: rem(22);
       }
     }
   }
@@ -135,6 +157,10 @@
   .messengers {
     gap: rem(10);
     font-family: $fontSemibold;
+
+    @include media('min', $desktop) {
+      margin-top: rem(7);
+    }
   }
 
   .messengers__icon {
@@ -142,14 +168,33 @@
   }
 
   button {
+    background: transparent;
+    color: #00A0FB;
     font-size: rem(12);
+    transition: all .3s linear;
 
     @include media('min', $tablet) {
       width: rem(230);
     }
+
     @include media('min', $desktop) {
       width: auto;
+      height: rem(60);
+      margin-top: rem(10);
       font-size: rem(14);
+    }
+
+    .icon {
+      transition: background-color .3s linear;
+    }
+
+    &:hover {
+      background: #00A0FB;
+      color: #ffffff;
+
+      .icon {
+        background: #ffffff;
+      }
     }
   }
 }

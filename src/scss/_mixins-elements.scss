@@ -23,6 +23,31 @@
   scrollbar-color: $color-scroll $color-bg;
 }
 
+@mixin scrollbar-design-thin(
+  $size: 4px,
+  $color-scroll: $gray2,
+  $color-bg: #F6F6F6
+) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-scroll;
+  }
+  &::-webkit-scrollbar-track {
+    background: $color-bg;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-scroll;
+    border-radius: 2px;
+    border: 0;
+  }
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: $color-scroll $color-bg;
+}
+
 @mixin scrollbar-hidden(
   $size: 1px,
   $color-scroll: transporent,
